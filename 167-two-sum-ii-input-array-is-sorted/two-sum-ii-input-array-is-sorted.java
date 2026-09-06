@@ -7,7 +7,7 @@ class Solution {
         while( L < R )
         {
             int sum = numbers[L]+numbers[R];
-            if(numbers[L]+numbers[R] == target)
+            if(sum == target)
             {
                 return new int[]{L+1,R+1};
             }
