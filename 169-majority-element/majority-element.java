@@ -1,22 +1,22 @@
-class Solution 
-{
-    public int majorityElement(int[] nums) 
-    {
-        
-        int value = 0;
-        int count = 0;
+class Solution {
+    public int majorityElement(int[] nums) {
 
-        for (int num : nums){
-            if(count == 0){
+        int value = 0;
+        int freq = 0;
+
+        for (int num : nums) {
+
+            if (freq == 0) {
                 value = num;
             }
-            if(num == value){
-                count ++;
-            }
-            else{
-                count --;
+
+            if (num == value) {
+                freq++;
+            } else {
+                freq--;
             }
         }
+
         return value;
     }
 }
